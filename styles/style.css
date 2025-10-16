@@ -5,6 +5,8 @@
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffc0cb, #ffe4e1); /* pink gradasi */
 }
 
 /* Login page styles */
@@ -15,6 +17,7 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background: linear-gradient(135deg, #ffc0cb, #ffe4e1);
 }
 
 .login_form {
@@ -22,15 +25,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 300px;
+  width: 90%;
+  max-width: 400px;
+  min-width: 250px;
+  height: auto;
+  padding: 20px;
   border: 1px solid #ccc;
   border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* biar ada kontras dengan background */
 }
 
 input[type="text"],
 input[type="password"] {
-  width: 300px;
+  width: 90%;
+  max-width: 300px;
   height: 40px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -45,7 +53,8 @@ input[type="password"]:focus {
 }
 
 button[type="submit"] {
-  width: 300px;
+  width: 90%;
+  max-width: 300px;
   height: 40px;
   border: none;
   border-radius: 5px;
@@ -64,13 +73,13 @@ button[type="submit"]:hover {
 
 .login_description {
   font-size: 14px;
-  color: #ccc;
+  color: #333;
   margin: 10px 0;
   padding: 0 10px;
   text-align: center;
 }
 
-/* Birtday page styles */
+/* Birthday page styles */
 .song {
   visibility: hidden;
 }
@@ -83,6 +92,7 @@ button[type="submit"]:hover {
   text-align: center;
   visibility: hidden;
   width: 100vw;
+  background: linear-gradient(135deg, #ffc0cb, #ffe4e1); /* pink gradasi */
 }
 
 .container > div {
@@ -93,16 +103,16 @@ button[type="submit"]:hover {
 }
 
 .one {
-  font-size: 4.5rem;
+  font-size: clamp(2rem, 5vw, 4.5rem);
 }
 
 .two {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   font-weight: lighter;
 }
 
 .three {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 4vw, 3rem);
 }
 
 .four .text-box {
@@ -111,7 +121,9 @@ button[type="submit"]:hover {
   margin: 0 auto;
   padding: 10px;
   position: relative;
-  width: 600px;
+  width: 90%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .text-box p {
@@ -134,7 +146,7 @@ button[type="submit"]:hover {
 }
 
 .five p {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   position: absolute;
   left: 0;
   right: 0;
@@ -147,17 +159,11 @@ button[type="submit"]:hover {
 }
 
 .five .idea-5 {
-  font-size: 4rem;
-}
-
-.idea-5 span,
-.idea-6 span,
-.wish-hbd span {
-  display: inline-block;
+  font-size: clamp(2rem, 6vw, 4rem);
 }
 
 .idea-6 span {
-  font-size: 15rem;
+  font-size: clamp(4rem, 15vw, 15rem);
 }
 
 .six {
@@ -168,8 +174,9 @@ button[type="submit"]:hover {
 
 .six img {
   display: inline-block;
-  height: 350px;
-  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  max-width: 90%;
   border-radius: 14px;
 }
 
@@ -177,7 +184,7 @@ button[type="submit"]:hover {
   position: absolute;
   left: 41.5%;
   top: -35%;
-  width: 60px;
+  width: 50px;
   rotate: 14deg;
 }
 
@@ -214,74 +221,21 @@ button[type="submit"]:hover {
   z-index: -1;
 }
 
-.eight svg:nth-child(1) {
-  fill: #bd6ecf;
-  left: 5vw;
-  top: 7vh;
-}
-
-.eight svg:nth-child(2) {
-  fill: #7dd175;
-  left: 35vw;
-  top: 23vh;
-}
-
-.eight svg:nth-child(3) {
-  fill: #349d8b;
-  left: 23vw;
-  top: 33vh;
-}
-
-.eight svg:nth-child(4) {
-  fill: #347a9d;
-  left: 57vw;
-  top: 43vh;
-}
-
-.eight svg:nth-child(5) {
-  fill: #c66053;
-  left: 7vw;
-  top: 68vh;
-}
-
-.eight svg:nth-child(6) {
-  fill: #bfaa40;
-  left: 77vw;
-  top: 42vh;
-}
-
-.eight svg:nth-child(7) {
-  fill: #e3bae8;
-  left: 83vw;
-  top: 68vh;
-}
-
-.eight svg:nth-child(8) {
-  fill: #8762cb;
-  left: 37vw;
-  top: 86vh;
-}
-
-.eight svg:nth-child(9) {
-  fill: #9a90da;
-  left: 87vw;
-  top: 94vh;
-}
-
+/* Wish */
 .wish-hbd {
-  font-size: 3em;
+  font-size: clamp(1.5rem, 5vw, 3em);
   margin: 0;
   text-transform: uppercase;
 }
 
 .wish h5 {
-  font-size: 2rem;
+  font-size: clamp(.8rem, 3vw, 2rem);
   font-weight: lighter;
   margin: 10px 0 0;
 }
 
 .nine p {
-  font-size: 2rem;
+  font-size: clamp(1rem, 4vw, 2rem);
   font-weight: lighter;
 }
 
@@ -290,74 +244,32 @@ button[type="submit"]:hover {
   z-index: 3;
 }
 
-/* Media Queries */
-@media screen and (max-height: 1000px) {
-  .six .hat {
-    left: 40%;
-  }
-}
-
-@media screen and (max-height: 800px) {
-  .six .hat {
-    left: 37%;
-  }
-}
-
-@media screen and (max-height: 700px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
-@media screen and (max-height: 850px) and (max-width: 450px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
+/* Media Queries untuk HP kecil */
 @media screen and (max-width: 500px) {
-  .login_form{
-    width: 350px;
-    height: 250px;
-  }
-
-  .container {
-    width: 100%;
-    padding: 0 10px;
+  .login_form {
+    width: 90%;
+    height: auto;
+    padding: 15px;
   }
 
   .four .text-box {
-    width: 90%;
-  }
-
-  .text-box .fake-btn {
-    bottom: -50px;
-    right: 5px;
-  }
-
-  .idea-5 span {
-    display: block;
-  }
-
-  .idea-6 span {
-    font-size: 10rem;
+    width: 95%;
   }
 
   .six .hat {
-    /* top: -20px; */
-    width: 50px;
+    width: 40px;
+    top: -25%;
   }
 
   .wish-hbd {
-    font-size: 2.2em;
+    font-size: clamp(1.2rem, 5vw, 2.2em);
   }
 
   .wish h5 {
-    font-size: .8rem;
+    font-size: clamp(.7rem, 3vw, 1.5rem);
   }
 
   .nine p {
-    font-size: 1.5rem;
-    font-weight: lighter;
+    font-size: clamp(.8rem, 4vw, 1.5rem);
   }
 }
